@@ -1,0 +1,33 @@
+<div class="form-body">
+  <div class="row">
+    <div class="form-holder">
+      <div class="form-content">
+        <div class="form-items">
+          <h3>Add Department</h3>
+
+          <form class="requires-validation" novalidate>
+
+            <div class="col-md-12">
+              <input class="form-control" type="text" [(ngModel)]="adddepartment.title" name="name" placeholder="Title" required>
+
+            </div>
+
+            <div class="col-md-12">
+              <input class="form-control" type="email" name="email"  [(ngModel)]="adddepartment.description"  placeholder="Description" required>
+
+            </div>
+
+
+            <div class="col-md-12">
+              <input class="form-control" type="number" [(ngModel)]="adddepartment.jobCode"  name="password" placeholder="JobCode" required>
+
+            </div>
+            <div class="form-button mt-3">
+              <button id="submit" type="submit" class="btn btn-primary" (click)="addDepartment()">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

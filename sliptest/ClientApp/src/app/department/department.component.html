@@ -1,0 +1,30 @@
+<button title="Add New Department" type="button" class="btn btn-primary rst" [routerLink]="['/Createdepartment']"> <i class="fa fa-plus-square" aria-hidden="true" style="margin-right:10px;"></i>Add New Department</button>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Title</th>
+      <th scope="col">JobCode</th>
+      <th scope="col">Description</th>
+      <th scope="col">Actions</th>
+
+
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let id of department">
+      <th scope="row">1</th>
+      <td>{{id.pkDepartmentId}}</td>
+      <td>{{id.title}}</td>
+      <td>{{id.jobCode}}</td>
+      <td>{{id.description}}</td>
+      ['/admin/editdesignation',termdata.id]
+      <td>
+        <i title="Edit" class="fa fa-pencil-square-o" [routerLink]="['/editdepartment',id.pkDepartmentId]" aria-hidden="true" style="font-size: 20px; color: #1164D0"></i>
+        <i title="Delete" class="fa fa-trash " aria-hidden="true" (click)="deletedepartment(id.pkDepartmentId)" style="font-size:20px;margin-left:10px;color:red"></i>
+      </td>
+    </tr>
+    
+  </tbody>
+</table>
